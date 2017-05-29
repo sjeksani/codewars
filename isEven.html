@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    /* do not use the modulus operator */
+    // function even(n) {
+    //     if ((n / 2) - Math.floor(n / 2) == 0) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+
+    // Another method
+
+    // function even(n) {
+    //     return (n & 1) ? false : true
+    // }
+
+    // Another method
+
+    function even(n) {
+        return !(n & 1);
+    }
+
+    console.log(even(10));
+    console.log(even(5));
+    </script>
+</body>
+
+</html>

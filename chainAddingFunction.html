@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // function add(n) {
+    //     var f = function(x) {
+    //         return add(n + x);
+    //     };
+    //     f.valueOf = function() {
+    //         return n;
+    //     };
+    //     return f;
+    // }
+
+    // Another Method
+    function add(n) {
+
+        var s = function(x) {
+            return add(n + x);
+        }
+        s.valueOf = function() {
+            return n;
+        }
+        return s;
+    }
+
+    console.log(add(2));
+    console.log(add(2)(4));
+    console.log(add(2)(8)(2));
+    </script>
+</body>
+
+</html>

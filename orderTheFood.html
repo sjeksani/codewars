@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var list1 = [{
+        firstName: 'Noah',
+        lastName: 'M.',
+        country: 'Switzerland',
+        continent: 'Europe',
+        age: 19,
+        language: 'C',
+        meal: 'vegetarian'
+    }, {
+        firstName: 'Anna',
+        lastName: 'R.',
+        country: 'Liechtenstein',
+        continent: 'Europe',
+        age: 52,
+        language: 'JavaScript',
+        meal: 'standard'
+    }, {
+        firstName: 'Ramona',
+        lastName: 'R.',
+        country: 'Paraguay',
+        continent: 'Americas',
+        age: 29,
+        language: 'Ruby',
+        meal: 'vegan'
+    }, {
+        firstName: 'George',
+        lastName: 'B.',
+        country: 'England',
+        continent: 'Europe',
+        age: 81,
+        language: 'C',
+        meal: 'vegetarian'
+    }, ];
+
+
+
+    function orderFood(list) {
+        // thank you for checking out the Coding Meetup kata :)
+        var obj = {};
+        list.forEach(function(val) {
+
+            obj[val.meal] = obj.hasOwnProperty(val.meal) ? obj[val.meal] + 1 : 1;
+        });
+        return obj;
+    }
+
+    console.log(orderFood(list1));
+
+    // Another method
+    /* create an empty object keep the orders and its count
+       loop through the list array
+       if the meal exists in the object add (1) to it
+       otherwise if it doesnt assign 1
+       return the orders */
+
+    // function orderFood(list) {
+    //     var orders = {};
+    //     list.forEach(d => {
+    //         if (orders[d.meal]) orders[d.meal]++;
+    //         else orders[d.meal] = 1;
+    //     });
+    //     return orders;
+    // }
+    </script>
+</body>
+
+</html>

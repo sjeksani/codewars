@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    Who likes keywords? Nobody likes keywords, so why use them? You know what keyword I use too much? if! We should make a function called _if, with its arguments as a logical test and two functions/lambdas where the first function is executed if the boolean is true, and the second if it's false, like an if/else statement, so that we don't have to mess around with those nasty keywords! Even so, It should support truthy/falsy types just like the keyword. Example: _if(true, function(){console.log("True")}, function(){console.log("false")}) // Logs 'True' to the console.
+    <script type="text/javascript">
+    function _if(bool, func1, func2) {
+        if (bool) {
+            func1();
+        } else {
+            func2();
+        }
+    }
+
+    // Another Method
+
+    /* function _if(bool, func1, func2) {
+        return bool ? func1() : func2();
+    } */
+
+    // Test Driven Development
+    // TODO: Replace examples and use TDD development by writing your own tests
+
+    // These are some CW specific test methods available:
+    //    Test.expect(boolean, [optional] message)
+    //    Test.assertEquals(actual, expected, [optional] message)
+    //    Test.assertSimilar(actual, expected, [optional] message)
+    //    Test.assertNotEquals(actual, expected, [optional] message)
+
+    // NodeJS assert is also automatically required for you.
+    //    assert(true)
+    //    assert.strictEqual({a: 1}, {a: 1})
+    //    assert.deepEqual({a: [{b: 1}]}, {a: [{b: 1}]})
+
+    // You can also use Chai (http://chaijs.com/) by requiring it yourself
+    // var expect = require("chai").expect;
+    // var assert = require("chai").assert;
+    // require("chai").should();
+
+    describe("Solution", function() {
+        it("should test for something", function() {
+            Test.assertEquals("actual", "expected", "This is just an example of how you can write your own TDD tests");
+        });
+    });
+    </script>
+</body>
+
+</html>
