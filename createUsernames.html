@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var list1 = [{
+        firstName: 'Maria',
+        lastName: 'Y.',
+        country: 'Cyprus',
+        continent: 'Europe',
+        age: 30,
+        language: 'Java'
+    }, {
+        firstName: 'Victoria',
+        lastName: 'T.',
+        country: 'Puerto Rico',
+        continent: 'Americas',
+        age: 70,
+        language: 'Python'
+    }, ];
+
+    function addUsername(list) {
+        var year = new Date().getFullYear();
+        var s = list.map(function(val) {
+            val.username = val.firstName.toLowerCase() + val.lastName[0].toLowerCase() + (year - val.age);
+            console.log(val);
+            return val;
+        });
+        return s;
+    }
+
+    addUsername(list1);
+    </script>
+</body>
+
+</html>
